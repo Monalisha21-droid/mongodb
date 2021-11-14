@@ -1,4 +1,4 @@
-	Commands for assignment2:-
+	Commands for assignment2 of mongodb:-
 db.zipcodes.find({city:'ATLANTA',state:'GA'})
 db.zipcodes.aggregate([{$match:{city:'ATLANTA',state:'GA'}}])
 db.zipcodes.aggregate([{$group:{_id:{city:'$city',state:'$state'},totalpop:{$sum:'$pop'}}},{$group:{_id:'$id.state',totalpop:{$avg:'$pop'}}}])
